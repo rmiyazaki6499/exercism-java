@@ -10,7 +10,9 @@ RUN apt-get update && \
 	apt-get install -y silversearcher-ag && \
 	apt-get install -y zsh
 
-RUN wget -O- https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh | zsh || true
+RUN wget -O- https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh | zsh || true && \
+	curl -s "https://get.sdkman.io" | zsh && \
+	sdk install gradle
 
 COPY . .
 

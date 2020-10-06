@@ -1,12 +1,11 @@
 class ReverseString {
 
     String reverse(String inputString) {
-        if (inputString == null) return null
-        String reversedString ='';
+        char[] stringArray = inputString.toCharArray();
+        StringBuilder reversedString = new StringBuilder();
         for (int i = inputString.length() - 1; i >= 0; i--) {
-            reversedString += inputString[i];
+            reversedString.append(stringArray[i]);
         }
-        return reversedString;
+        return reversedString.toString();
     }
-  
 }

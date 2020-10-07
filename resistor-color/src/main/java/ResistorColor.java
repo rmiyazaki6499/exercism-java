@@ -1,9 +1,18 @@
 class ResistorColor {
     int colorCode(String color) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        String colors[] = colors();
+
+        for (int i = 0; i < colors.length; i++ )
+        {
+            if (color == colors[i]) {
+                return i;
+            }
+        }
+        return 0;
     }
 
     String[] colors() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        String colors[] = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
+        return colors;
     }
 }
